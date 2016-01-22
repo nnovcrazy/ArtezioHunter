@@ -66,11 +66,15 @@ app.get('/logout', function (req, res) {
     res.redirect('/');
 });
 
+console.log('env', process.env.NODE_ENV)
+
 app.listen(app.get('port'), function() {
     var url = 'http://' + require('os').hostname() +':'+ app.get('port')
-    console.log('listen', url)
-    var open = require("open");
-    open(url);
+
+    if (process.env.NODE_ENV == 'DEVELOPMENT') {
+        console.log('listen', url)
+        require("open")(url);
+    }
 });
 
 
@@ -86,7 +90,7 @@ passport.use(new HeadHunterStrategy({
         console.log('refreshToken', refreshToken);
         console.log('profile', profile);
 
-        request({
+        /*request({
             url: 'https://api.hh.ru/resumes/mine',
             headers: {
                 'User-Agent': process.env.npm_package_name+' '+process.env.npm_package_version+' (Dmitriy.Alexandrov@artezio.com)'//This important must inherits e-mail
@@ -94,8 +98,8 @@ passport.use(new HeadHunterStrategy({
         }, function(err, response, rawdata) {
             console.log('err', err)
             //console.log('response', response)
-            console.log('rawdata', rawdata)
-        });
+            console.trace('rawdata', rawdata)
+        });*/
 
         return done(null, profile);
     }
