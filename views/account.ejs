@@ -1,0 +1,51 @@
+<% layout('layout') -%>
+<table>
+    <tr>
+        <td>id</td>
+        <td><%= user.id %></td>
+    </tr>
+    <tr>
+        <td>displayName</td>
+        <td><%= user.displayName %></td>
+    </tr>
+    <tr>
+        <td>username</td>
+        <td><%= user.username %></td>
+    </tr>
+    <tr>
+        <td>first_name</td>
+        <td><%= user._json.first_name %></td>
+    </tr>
+    <tr>
+        <td>last_name</td>
+        <td><%= user._json.last_name %></td>
+    </tr>
+    <tr>
+        <td>profileUrl</td>
+        <td><%= user.profileUrl %></td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td><%= user._json.email %></td>
+    </tr>
+    <tr>
+        <td><span title="is_in_search">ищу работу</span></td>
+        <td><%=user._json.is_in_search%></td>
+    </tr>
+    <tr>
+        <td>is_anonymous</td>
+        <td><%=user._json.is_anonymous%></td>
+    </tr>
+    <tr>
+        <td><span title="is_applicant">соискатель</span></td>
+        <td><%=user._json.is_applicant%></td>
+    </tr>
+    <tr>
+        <td><span title="is_employer">работодатель</span></td>
+        <td><%=user._json.is_employer%></td>
+    </tr>
+    <tr>
+        <td>counters</td>
+        <td><%=JSON.stringify(user._json.counters)%></td>
+    </tr>
+</table>

@@ -1,0 +1,8 @@
+<% layout('layout') -%>
+<% if (!user) { %>
+	<h2>Welcome! Please log in.</h2>
+<% } else { %>
+    <h2>Hello, <%-user.displayName%></h2>
+
+    <pre><%-JSON.stringify(user, null, 2)%></pre>
+<% } %>
