@@ -1,0 +1,12 @@
+git clone https://github.com/php-loep/oauth2-client.git
+cd oauth2-client
+
+# install composer
+curl -sS https://getcomposer.org/installer > composer_install.php
+php composer_install.php
+php composer.phar install
+
+# If you use windows
+# edit oauth2-client\composer.json
+# and change required version of "guzzlehttp/guzzle": "~4"
+# and run "php composer.phar install"

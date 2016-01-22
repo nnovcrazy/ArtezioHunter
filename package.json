@@ -1,0 +1,23 @@
+{
+  "name": "ArtezioHunter",
+  "private": true,
+  "version": "1.0.1",
+  "description": "oAuth hh.ru auth with http://passportjs.org/",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.1",
+    "ejs-locals": "^1.0.2",
+    "express-session": "^1.13.0",
+    "method-override": "^2.3.5",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.2",
+    "passport-headhunter": "^0.1.8",
+    "request": "^2.67.0",
+    "underscore": "^1.8.3"
+  }
+}
