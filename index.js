@@ -1,3 +1,8 @@
+process.on('unhandledRejection', function(reason, p) {
+    console.log("Unhandled Rejection at: Promise ", p, " reason: ", reason);
+// application specific logging, throwing an error, or other logic here
+});
+
 var express = require('express'),
     passport = require('passport'),
     request = require('request'),
